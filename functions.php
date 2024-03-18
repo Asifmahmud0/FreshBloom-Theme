@@ -26,3 +26,17 @@ function asif_css_js_file() {
 
 }
 add_action('wp_enqueue_scripts', 'asif_css_js_file');
+
+// Enqueue Bootstrap CSS from CDN
+function enqueue_bootstrap_css() {
+    wp_enqueue_style('bootstrap-css', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css', array(), '5.3.0', 'all');
+}
+add_action('wp_enqueue_scripts', 'enqueue_bootstrap_css');
+
+// Enqueue Bootstrap JS from CDN and jQuery as dependency
+function enqueue_bootstrap_js() {
+    wp_enqueue_script('jquery');
+    wp_enqueue_script('bootstrap-js', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js', array('jquery'), '5.3.0', true);
+}
+add_action('wp_enqueue_scripts', 'enqueue_bootstrap_js');
+

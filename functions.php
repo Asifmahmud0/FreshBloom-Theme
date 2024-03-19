@@ -40,3 +40,30 @@ function enqueue_bootstrap_js() {
 }
 add_action('wp_enqueue_scripts', 'enqueue_bootstrap_js');
 
+// Google Fonts Enqueue
+function asif_add_google_fonts(){
+    wp_enqueue_style('asif_google_fonts', 'https://fonts.googleapis.com/css2?family=Kaisei+Decol&family=Oswald:wght@200..700&family=Poppins:wght@100;200;400;700&display=swap', false );
+        add_action('wp_enqueue_scripts', 'asif_add_google_fonts');
+} 
+
+//Theme function
+function logo_customizer_register($wp_customize){
+    $wp_customize->add_section('asif_header_area',array(
+        'title' => __('Header Area', 'freshBloom'),
+        'description' => 'If you interested to update header area',
+    ));
+
+    $wp_customize->add_setting('asif_logo', array(
+        'default' => get_bloginfo('template_directory').'/img/Freshbloom_logo.webp',
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize,'asif_logo', array(
+        'label' => 'Logo Upload',
+        'description' => 'Upload your image',
+        'setting' => 'asif_logo',
+        'section' => 'asif_header_area',
+        )
+    ));
+}
+
+add_action('customize_register', 'logo_customizer_register');

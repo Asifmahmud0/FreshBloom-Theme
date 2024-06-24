@@ -18,29 +18,7 @@
                 <a href=""><img src= " <?php echo get_theme_mod('asif_logo'); ?>" alt=""></a>
             </div>
             <div class="col-md-9">
-                <ul id="nav">
-                    <li><a href="">Home</a></li>
-                    <li><a href="">About us</a></li>
-                    <li><a href="">Projects</a></li>
-                    <li><a href="">Services</a>
-                        <ul>
-                        <li><a href="">Dropdown Menu</a></li>
-                        <li><a href="">Dropdown Menu</a></li>
-                        <li><a href="">Dropdown Menu</a>
-                        <ul>
-                            <li><a href="">Dropdown Menu</a></li>
-                            <li><a href="">Dropdown Menu</a></li>
-                            <li><a href="">Dropdown Menu</a>
-                            </li>
-                        </ul>
-                        </li>
-                        </ul>
-                    </li>
-                    <li><a href="">Faq</a></li>
-                    <li><a href="">Media</a></li>
-                    <li><a href="">portfolio</a></li>
-                    <li><a href="">Contact us</a></li>
-                </ul>
+                <?php wp_nav_menu( array('theme_location' => 'primary _menu', 'menu_id' => 'nav') ); ?>
             </div>
         </div>
     </div>

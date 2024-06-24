@@ -54,8 +54,9 @@ function logo_customizer_register($wp_customize){
     ));
 
     $wp_customize->add_setting('asif_logo', array(
-        'default' => get_bloginfo('template_directory').'/img/Freshbloom_logo.webp',
+        'default' => get_template_directory_uri() . '/img/Freshbloom_logo00 .webp',
     ));
+    
 
     $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize,'asif_logo', array(
         'label' => 'Logo Upload',
@@ -67,3 +68,6 @@ function logo_customizer_register($wp_customize){
 }
 
 add_action('customize_register', 'logo_customizer_register');
+
+// Menu Register
+register_nav_menu( 'primary _menu', __('Primary Menu', 'freshBloom'));

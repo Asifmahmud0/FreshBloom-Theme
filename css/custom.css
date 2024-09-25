@@ -12,11 +12,12 @@ h1, h2, h3, h4, h5, h6{
  Header Area Style
 ========================================*/
 #header_area{
-    padding: 15px 0;
+    padding: 0px 80px;
+   
 }
 #header_area .col-md-9 ul{
     font-family: "Oswald", sans-serif;
-    margin: 10px 0 0;
+    margin: 30px 0 0;
     padding: 0;
     list-style: none;
     text-align: right;
@@ -25,10 +26,16 @@ h1, h2, h3, h4, h5, h6{
     display: inline-block;
     position:relative ;
 }
+#header_area .col-md-9 ul li a span{
+    display: block;
+    text-align: center;
+  
+}
 #header_area .col-md-9 ul a{
     color: #262626;
     padding: 10px 10px;
     display: block;
+    font-size: 16px;
     text-transform: capitalize;
     text-decoration: none;
 }
@@ -45,6 +52,7 @@ h1, h2, h3, h4, h5, h6{
     text-align: left;
     top: 10px;
     width: 200px;
+    z-index: 9999;
 }
 #header_area .col-md-9 ul li:hover ul{
     left: 0;
@@ -92,3 +100,84 @@ color: #fff;
     background: #ea1a70;
     color: #fff;
   }
+  /*=======================================
+ Menu Position
+========================================*/
+#header_area.left_menu .col-md-3{
+    order: 2;
+    text-align: center;
+}
+#header_area.left_menu .col-md-9{
+    order: 1;
+}
+#header_area.left_menu .col-md-9 ul{
+ text-align: left;
+}
+#header_area.center_menu .col-md-3{
+    width: 100%;
+    text-align: center;
+}
+#header_area.center_menu .col-md-9{
+   width: 100%;
+}
+#header_area.center_menu .col-md-9 ul{
+ text-align: center;
+}
+/*=======================================
+Copyright Position
+========================================*/
+#footer-area{
+background: #262626;
+color: #fff;
+padding: 5px 0;
+text-align: center;
+}
+#footer-area p{
+    margin: 0;
+    color: #fff;
+    font-size: 15px;
+}
+#footer-area p a{
+    background: #ea1a70;
+}
+#footer-area p a:hover{
+    text-decoration: underline;
+}
+/*=======================================
+index page style
+========================================*/
+#body_area{
+    padding: 45px 0;
+}
+#body_area .blog_area{
+    width: 100%;
+    margin-bottom: 15px;
+}
+#body_area .post_thumb{
+    width: 100%;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+#body_area .post_thumb img{
+    width: 100%;
+    display: block;
+    transition: 0.5s;
+}
+#body_area .post_thumb:hover img{
+    transform: scale(1.1);
+}
+#body_area .post_details{
+    width: 100%;
+}
+#body_area .post_details h2{
+    font-weight: 700;
+    font-size: 30px; 
+}
+#body_area .post_details h2 a{
+    color: #262626;
+    text-decoration: none;
+    transition: 0.5s;
+}
+#body_area .post_details h2 a:hover{
+    color: #ea1a70;
+}
